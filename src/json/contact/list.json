@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "name": "Wilmer Deluna",
+        "title": "Facility Manager",
+        "phone": "875455453",
+        "image": "avatar-11.jpg",
+        "email": "wilmer@gmail.com"
+    },
+    {
+        "id": 2,
+        "name": "John Doe",
+        "title": "Manager",
+        "phone": "875455453",
+        "image": "avatar-10.jpg",
+        "email": "john@gmail.com"
+    },
+    {
+        "id": 3,
+        "name": "John Smith",
+        "title": "CMO",
+        "phone": "875455453",
+        "image": "avatar-25.jpg",
+        "email": "smith@gmail.com"
+    },
+    {
+        "id": 4,
+        "name": "Wilmer Deluna",
+        "title": "Property Manager",
+        "phone": "875455453",
+        "image": "avatar-26.jpg",
+        "email": "john@gmail.com"
+    },
+    {
+        "id": 5,
+        "name": "Wilmer Deluna",
+        "title": "Facility Manager",
+        "phone": "875455453",
+        "image": "avatar-11.jpg",
+        "email": "wilmer@gmail.com"
+    },
+    {
+        "id": 6,
+        "name": "John Dow",
+        "title": "Manager",
+        "phone": "875455453",
+        "image": "avatar-10.jpg",
+        "email": "john@gmail.com"
+    },
+    {
+        "id": 7,
+        "name": "Vinson JK",
+        "title": "Facility Manager",
+        "phone": "875455453",
+        "image": "avatar-11.jpg",
+        "email": "wilmer@gmail.com"
+    }
+]

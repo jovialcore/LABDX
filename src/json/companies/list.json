@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "company": "Clampett Oil and Gas Corp.",
+        "phone": "8754554531",
+        "billingstreet": "Escalon Street",
+        "image": "c-logo2.png",
+        "billingcity": "Palo Alto",
+        "billingstate": "CA",
+        "billingcountry": "United States"
+    },
+    {
+        "id": 2,
+        "company": "Acme Corporation",
+        "phone": "8754554531",
+        "billingstreet": "1000 Escalon Street",
+        "image": "c-logo.png",
+        "billingcity": "Palo Alto",
+        "billingstate": "CA",
+        "billingcountry": "USA"
+    },
+    {
+        "id": 3,
+        "company": "Soylent Corp",
+        "phone": "8754554531",
+        "billingstreet": "Havier Street",
+        "image": "c-logo3.png",
+        "billingcity": "Soylent Corp",
+        "billingstate": "CA",
+        "billingcountry": "India"
+    },
+    {
+        "id": 4,
+        "company": "Umbrella",
+        "phone": "8754554531",
+        "billingstreet": "1000 Escalon Street",
+        "image": "c-logo2.png",
+        "billingcity": "Umbrella",
+        "billingstate": "CA",
+        "billingcountry": "Europe"
+    },
+    {
+        "id": 5,
+        "company": "Clampett Oil and Gas Corp.",
+        "phone": "8754554531",
+        "billingstreet": "Nephew Street",
+        "image": "c-logo.png",
+        "billingcity": "Palo Alto",
+        "billingstate": "CA",
+        "billingcountry": "United States"
+    },
+    {
+        "id": 6,
+        "company": "Silicon Valley",
+        "phone": "8754554531",
+        "billingstreet": "Albert Street",
+        "image": "c-logo2.png",
+        "billingcity": "Palo Alto",
+        "billingstate": "-",
+        "billingcountry": "India"
+    },
+    {
+        "id": 7,
+        "company": "Fringe",
+        "phone": "8754554531",
+        "billingstreet": "RVN Roas",
+        "image": "c-logo3.png",
+        "billingcity": "Umbrella",
+        "billingstate": "CA",
+        "billingcountry": "USA"
+    }
+]
