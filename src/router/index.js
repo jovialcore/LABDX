@@ -67,8 +67,8 @@ import users from '@/components/Application/users'
 import visithistory from '@/components/patients/visithistory'
 Vue.use(Router)
 const router = new Router({
-  mode: 'history', 
-  base: 'vuejs', 
+  mode: 'history',
+  base: 'app', // you use the base tag to set the root path of your application  or process.env.BASE_URL
   routes: [
     {
       path: '/',
