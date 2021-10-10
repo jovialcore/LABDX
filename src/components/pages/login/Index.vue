@@ -18,12 +18,12 @@
 								<form action="index">
 									<div class="form-group">
 										<label class="form-control-label">Email Address</label>
-										<input type="email" class="form-control">
+										<input type="email" v-model="email" class="form-control">
 									</div>
 									<div class="form-group">
 										<label class="form-control-label">Password</label>
 										<div class="pass-group">
-											<input type="password" class="form-control pass-input">
+											<input type="password"  v-model="password" class="form-control pass-input">
 											<span class="fas fa-eye toggle-password"></span>
 										</div>
 									</div>
@@ -40,7 +40,7 @@
 											</div>
 										</div>
 									</div>
-									<button class="btn btn-lg btn-block btn-primary" type="submit">Login</button>
+									<button class="btn btn-lg btn-block btn-primary" type="submit"  @click="login">Login</button>
 									<div class="login-or">
 										<span class="or-line"></span>
 										<span class="span-or">or</span>
