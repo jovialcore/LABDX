@@ -83,7 +83,10 @@ export default {
           password: this.password,
         })
         .then(() => {
-          this.$router.push("/");
+          this.$router.push("/"); //this is the equivalent of window.location.href = '/' or <router-link to="/">
+        })
+        .catch((err) => {
+          console.log(err);
         });
     },
   },

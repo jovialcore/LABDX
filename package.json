@@ -20,6 +20,7 @@
     "raphael": "^2.3.0",
     "serve-static": "^1.14.1",
     "vue": "^2.5.2",
+    "vue-axios": "^3.3.7",
     "vue-chartjs": "^3.5.1",
     "vue-custom-scrollbar": "^1.4.0",
     "vue-feather-icons": "^5.1.0",
