@@ -277,10 +277,10 @@
 						</li>
 						<li class="notification-message">
 							<a href="#">
-								<div class="media">
-									<span class="avatar">
-									<img alt="" src="@/assets/img/profiles/avatar-03.jpg" class="rounded-circle">
-									</span>
+						<div class="media">
+						<span class="avatar">
+					<img alt="" src="@/assets/img/profiles/avatar-03.jpg" class="rounded-circle">
+						</span>
 									<div class="media-body">
 										<p class="noti-details"><span class="noti-title">Tarah Shropshire</span> changed the task name <span class="noti-title">Appointment booking with payment gateway</span></p>
 										<p class="noti-time"><span class="notification-time">6 mins ago</span></p>
