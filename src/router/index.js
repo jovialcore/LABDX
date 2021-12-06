@@ -78,21 +78,31 @@ const router = new Router({
     {
       path: '/index',
       name: 'index',
+ 
       component: Index
     },
     {
       path: '/alert-log',
       name: 'alert-log',
+      meta: {
+        auth: true
+      },
       component: alert
     },
     {
       path: '/amc-tracking',
       name: 'amc-tracking',
+      meta: {
+        auth: true
+      },
       component: amctracking
     },
     {
       path: '/appointments-visit',
       name: 'appointments-visit',
+      meta: {
+        auth: true
+      },
       component: appointmentsvisit
     },
     {
@@ -140,7 +150,7 @@ const router = new Router({
       name: 'clinical-report',
       component: clinicalreport
     },
-     {
+    {
       path: '/components',
       name: 'components',
       component: components
@@ -205,12 +215,12 @@ const router = new Router({
       name: 'form-basic-inputs',
       component: formbasicinputs
     },
-     {
+    {
       path: '/form-horizontal',
       name: 'form-horizontal',
       component: formhorizontal
     },
-     {
+    {
       path: '/form-input-groups',
       name: 'form-input-groups',
       component: forminputgroups
@@ -245,7 +255,7 @@ const router = new Router({
       name: 'invoice',
       component: invoice
     },
-     {
+    {
       path: '/lab-documents',
       name: 'lab-documents',
       component: labdocument
@@ -275,7 +285,7 @@ const router = new Router({
       name: 'patient-list',
       component: patientlist
     },
-     {
+    {
       path: '/patients-data',
       name: 'patients-data',
       component: patientsdata
@@ -365,7 +375,7 @@ const router = new Router({
       name: 'report-results',
       component: reportresults
     },
-     {
+    {
       path: '/settings',
       name: 'settings',
       component: settings
@@ -380,7 +390,7 @@ const router = new Router({
       name: 'tables-basic',
       component: tablesbasic
     },
-     {
+    {
       path: '/tax-types',
       name: 'tax-types',
       component: taxtypes
@@ -390,12 +400,12 @@ const router = new Router({
       name: 'unique-insurance',
       component: uniqueinsurance
     },
-     {
+    {
       path: '/users',
       name: 'users',
       component: users
     },
-     {
+    {
       path: '/visit-history',
       name: 'visit-history',
       component: visithistory
@@ -403,4 +413,15 @@ const router = new Router({
   ],
   linkActiveClass: "active",
 })
+
+router.beforeEach((to, from, next)=> {
+  const loggedIn = localStorage.getItem('user')
+
+  if(to.matched.some(record => record.meta.auth) && !loggedIn){
+    next('/login')
+    return 
+  }
+  next();
+})
+
 export default router
