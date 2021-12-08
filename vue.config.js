@@ -1,6 +1,6 @@
-module.exports = {
-    publicPath: '',
-};
+// module.exports = {
+//     publicPath: '',
+// };
 
 // module.exports = {
 //     outputDir: '../static',
