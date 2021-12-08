@@ -8,8 +8,8 @@
         "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
         "start": "npm run dev",
         "build": "node build/build.js",
-        "start": "node server.js",
-        "postinstall": "ng build"
+        "postinstall": "npm run build",
+        "start": "node server.js"
     },
     "dependencies": {
         "axios": "^0.22.0",
