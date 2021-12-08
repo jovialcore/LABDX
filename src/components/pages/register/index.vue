@@ -105,7 +105,7 @@
 						pass: this.pass,
 					})
 					.then(()=> {
-						this.$router.push("/profile")
+						this.$router.push("/settings")
 					}).catch((err) => {
 						console.log(err)
 					})

@@ -32,7 +32,7 @@ export default new Vuex.Store({
             return axios
                 .post('/register', credentials)
                 .then(({ data }) => { //instead of "response.data", using argument destructuring you can just write "data"
-                    commit('setUserdata', data)
+                    commit('setUserData', data)
                 })
 
         },
