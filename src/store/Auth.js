@@ -4,7 +4,7 @@ import axios from 'axios'
 
 Vue.use(Vuex)
 
-axios.defaults.baseURL = 'http://127.0.0.1:8000/api/login'
+axios.defaults.baseURL = 'http://127.0.0.1:8000/api/'
 
 export default new Vuex.Store({
     state: {// state is like data(), the single source of truth
@@ -14,6 +14,7 @@ export default new Vuex.Store({
     mutations: {// mutations are like methods in the case of vuex
         setUserData(state, userData) {
             state.user = userData
+            console.log(userData)
             localStorage.setItem('user', JSON.stringify(userData))
             axios.defaults.headers.common.Authorization = `Bearer ${userData.token}`
         },

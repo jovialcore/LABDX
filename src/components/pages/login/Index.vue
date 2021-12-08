@@ -15,7 +15,7 @@
 								<h1>Welcome to LabDx</h1>
 								<p class="account-subtitle">Access your dashboard</p>
 
-								<form action="index">
+								<form >
 									<div class="form-group">
 										<label class="form-control-label">Email Address</label>
 										<input type="email" v-model="email" class="form-control">
@@ -40,7 +40,7 @@
 											</div>
 										</div>
 									</div>
-									<button class="btn btn-lg btn-block btn-primary" type="submit"  @click="login">Login</button>
+									<button class="btn btn-lg btn-block btn-primary" type="button" @click="logger"> Login </button>
 									<div class="login-or">
 										<span class="or-line"></span>
 										<span class="span-or">or</span>
@@ -76,7 +76,8 @@ export default {
   },
 
   methods: {
-    login() {
+    logger() {
+      
       this.$store
         .dispatch("login", {
           email: this.email,

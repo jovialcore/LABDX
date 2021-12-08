@@ -2,6 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
+import axios from 'axios'
 import store from './store/Auth'
 import router from './router'
 import LayoutHeader from './components/layout/Header'
@@ -24,21 +25,23 @@ new Vue({ //i need to look into what is happening here
   el: '#app',
   router,
   store,
-  created() {
-    const userInfo = localStorage.getItem('user')
-    if (userInfo) {
-      const userData = JSON.parse(userInfo)
-      this.$store.commit('setUserData', userData)
-    } axios.interceptors.response.use(
-      response => response,
-      error => {
-        if (error.response.status === 401) {
-          this.$store.dispatch('logout')
-        }
-        return Promise.reject(error)
-      }
-    )
-  },
+  // created() {
+  //   const userInfo = localStorage.getItem('user')
+  //   if (userInfo) {
+  //     const userData = JSON.parse(userInfo)
+  //     this.$store.commit('setUserData', userData)
+  //   } axios.interceptors.response.use(
+  //     response => response,
+  //     error => {
+  //       if (error.response.status === 401) {
+  //         this.$store.dispatch('logout')
+  //       }else {
+  //         console.log('nahwa o')
+  //       }
+  //       return Promise.reject(error)
+  //     }
+  //   )
+  // },
   components: { App },
   template: '<App/>'
 
