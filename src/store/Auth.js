@@ -7,14 +7,13 @@ Vue.use(Vuex)
 axios.defaults.baseURL = 'http://127.0.0.1:8000/api/'
 
 export default new Vuex.Store({
-    state: {// state is like data(), the single source of truth
+    state: { // state is like data(), the single source of truth
         user: null
     },
 
-    mutations: {// mutations are like methods in the case of vuex
+    mutations: { // mutations are like methods in the case of vuex
         setUserData(state, userData) {
             state.user = userData
-            console.log(userData)
             localStorage.setItem('user', JSON.stringify(userData))
             axios.defaults.headers.common.Authorization = `Bearer ${userData.token}`
         },
@@ -28,6 +27,15 @@ export default new Vuex.Store({
 
     //actions are used to handle asynchronous operations and actions commit mutations
     actions: {
+
+        register({ commit }, credentials) {
+            return axios
+                .post('/register', credentials)
+                .then(({ data }) => { //instead of "response.data", using argument destructuring you can just write "data"
+                    commit('setUserdata', data)
+                })
+
+        },
         login({ commit }, credentials) {
 
             // we use this commit  with the reference of argument destructuring in javascript
@@ -57,7 +65,7 @@ export default new Vuex.Store({
 
     getters: {
         isLogged: state => !!state.user // this is a short form to make value to be a boolean; either true or false()
-        //so basically we are checking if the user is logged with true/false
+            //so basically we are checking if the user is logged with true/false
     }
 })
 

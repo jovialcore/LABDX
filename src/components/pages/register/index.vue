@@ -12,28 +12,43 @@
 						<div class="login-right">
 							<div class="login-right-wrap">
 								<h1>Register</h1>
-								<p class="account-subtitle">Access to our dashboard</p>
+								<p class="account-subtitle">Thank you for choosing EMR. Please fill the form </p>
 								
 								<!-- Form -->
-								<form action="login">
+								<form>
 									<div class="form-group">
 										<label class="form-control-label">Name</label>
-										<input class="form-control" type="text">
+										<input class="form-control" type="name" v-model="name">
 									</div>
 									<div class="form-group">
 										<label class="form-control-label">Email Address</label>
-										<input class="form-control" type="text">
+										<input class="form-control" type="email" v-model="email">
+									</div>
+									<div class="form-group">
+										<label class="form-control-label">Date of birth</label>
+										<input class="form-control" type="date" v-model="dob">
+									</div>
+									<div class="form-group">
+										<div >Gender </div>
+										<div class="form-check-inline mt-2">
+  											<label class="form-check-label">
+    										<input type="radio" class="form-check-input" value="male" v-model="gender">Male </label>
+										</div>
+										<div class="form-check-inline">
+  											<label class="form-check-label">
+    										<input type="radio" class="form-check-input" value="female" v-model="gender">Female</label>
+										</div>
 									</div>
 									<div class="form-group">
 										<label class="form-control-label">Password</label>
-										<input class="form-control" type="text">
+										<input class="form-control" type="text" v-model="pass">
 									</div>
 									<div class="form-group">
 										<label class="form-control-label">Confirm Password</label>
-										<input class="form-control" type="text">
+										<input class="form-control" type="text" v-model="cpass">
 									</div>
 									<div class="form-group mb-0">
-										<button class="btn btn-lg btn-block btn-primary" type="submit">Register</button>
+										<button class="btn btn-lg btn-block btn-primary" type="button" @click="register">Register</button>
 									</div>
 								</form>
 								<!-- /Form -->
@@ -63,6 +78,40 @@
 
 <script>
 	export default {
+
+		data() {
+
+			return{
+				name: '',
+				email: '',
+				dob: null,
+				gender: '',
+				cpass: '',
+				pass: '',
+			}
+		},
+
+		methods : {
+			register() {
+				
+				if (this.pass == this.cpass)
+				{
+					this.$store
+					.dispatch('register', {
+						name: this.name,
+						email: this.email,
+						dob: this.dob,
+						gender:this.gender,
+						pass: this.pass,
+					})
+					.then(()=> {
+						this.$router.push("/profile")
+					}).catch((err) => {
+						console.log(err)
+					})
+				}
+			}
+		},
 		mounted() {
 			$(document).ready(function () {
 
