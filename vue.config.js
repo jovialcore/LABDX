@@ -1,3 +1,8 @@
+// module.exports = {
+//     publicPath: '/',
+// };
+
 module.exports = {
-    publicPath: './',
-};
+    outputDir: '../static',
+    indexPath: 'index.html'
+}
