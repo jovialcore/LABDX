@@ -8,8 +8,9 @@
         "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
         "start": "npm run dev",
         "build": "node build/build.js",
-        "postinstall": "npm run build",
-        "start": "node server.js"
+        "start": "node index.js",
+        "build": "ng build",
+        "heroku-postbuild": "ng build --prod"
     },
     "dependencies": {
         "axios": "^0.22.0",
