@@ -4,5 +4,5 @@
 
 module.exports = {
     outputDir: '../static',
-    indexPath: 'index.html'
+    indexPath: '../index.html'
 }
