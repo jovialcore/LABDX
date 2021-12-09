@@ -70,7 +70,7 @@
 export default {
   data() {
     return {
-      env: process.env.ROOT_API,
+     notification: "",
       email: "",
       password: "",
     };
@@ -88,6 +88,7 @@ export default {
           this.$router.push("/"); //this is the equivalent of window.location.href = '/' or <router-link to="/">
         })
         .catch((err) => {
+          console.log(err.data)
           console.log(err);
         });
     },
