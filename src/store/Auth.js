@@ -4,7 +4,9 @@ import axios from 'axios'
 
 Vue.use(Vuex)
 
-axios.defaults.baseURL = '/api'
+axios.defaults.baseURL = process.env.ROOT_API
+    //"http://labdxbe.herokuapp.com/"
+    //process.env.VUE_APP_API_ENDPOINT
 
 export default new Vuex.Store({
     state: { // state is like data(), the single source of truth
@@ -30,7 +32,7 @@ export default new Vuex.Store({
 
         register({ commit }, credentials) {
             return axios
-                .post('/register', credentials)
+                .post('/api/register', credentials)
                 .then(({ data }) => { //instead of "response.data", using argument destructuring you can just write "data"
                     commit('setUserData', data)
                 })
@@ -53,7 +55,7 @@ export default new Vuex.Store({
     you can also add other parameters in the function
     */
             return axios
-                .post('/login', credentials)
+                .post('/api/login', credentials)
                 .then(({ data }) => {
                     commit('setUserData', data)
                 })

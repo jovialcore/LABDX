@@ -70,6 +70,7 @@
 export default {
   data() {
     return {
+      env: process.env.ROOT_API,
       email: "",
       password: "",
     };
