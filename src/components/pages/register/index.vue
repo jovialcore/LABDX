@@ -56,10 +56,6 @@
 									</div>
 								</div>
 									<div class="form-group">
-										<label class="form-control-label">Date of birth</label>
-										<input class="form-control" type="date" v-model="dob">
-									</div>
-									<div class="form-group">
 										<div >Gender </div>
 										<div class="form-check-inline mt-2">
   											<label class="form-check-label">
@@ -115,7 +111,9 @@
 			return{
 				name: '',
 				email: '',
-				dob: null,
+				day: null,
+				month:null,
+				year: null,
 				gender: '',
 				cpass: '',
 				pass: '',
