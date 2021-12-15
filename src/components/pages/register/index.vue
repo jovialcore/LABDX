@@ -27,18 +27,19 @@
 								<div class="row mx-auto">
 									<div class="form-group col">
 										<label>Day</label>
-											<select class="select">
-												<option v-for="days in 31" v-bind:value ="days" :key="days">{{days}}</option>
+											<select class="form-control" v-model="day">
+												<option v-for="days in 31"  :key="days">{{days}}</option>
 											</select>
 									</div>
 								<div class="form-group col">
 										<label>Month</label>
-											<select class="select">
+										<select class="form-control" v-model="month">
+											<option disabled > Select</option>
 												<option value="1">January</option>
-												<option value="2">Febuary</option>
-												<option value="3">March</option>
+												<option  value="2">Febuary</option>
+												<option  value="3">March</option>
 												<option value="4">April</option>
-												<option value="5">May</option>
+												<option    value="5">May</option>
 												<option value="6">June</option>
 												<option value="7">July</option>
 												<option value="8">August</option>
@@ -46,12 +47,14 @@
 											    <option value="10">October</option>
 												<option value="11">November</option>
 												<option value="12">December</option>
-											</select>
+										</select>
+											
 									</div>
 								<div class="form-group col">
 										<label>Year</label>
-											<select class="select">
-												<option v-for="years in 61" :key="years" :value="years" >  {{2010 - years}}</option>
+											<select class="form-control" v-model="year" >
+												 <option disabled value=""> Select</option>
+												<option  v-for="years in 61" :key="years" >  {{2010 - years}}</option>
 											</select>
 									</div>
 								</div>
@@ -107,17 +110,15 @@
 	export default {
 
 		data() {
-
 			return{
 				name: '',
 				email: '',
-				day: null,
-				month:null,
-				year: null,
+				day: '',
+				month:'',
+				year: '',
 				gender: '',
 				cpass: '',
 				pass: '',
-		
 			}
 		},
 
