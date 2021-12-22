@@ -12,16 +12,21 @@
 						<div class="login-right">
 							<div class="login-right-wrap">
 								<h1>Register</h1>
+							<!-- <div class="text-danger" v-for="msg in notifmsg" :key="msg.index"> 
+										{{msg}} 
+										
+									</div> -->
+								<div v-for="(errorArray, idx) in notifmsg" :key="idx">
+									<div v-for="(allErrors, idx) in errorArray" :key="idx">
+										<span class="text-danger">{{ allErrors}} </span>
+									</div>
+       							</div>
 								<div >
 								<p class="account-subtitle">Thank you for choosing EMR. Please fill the form </p>
 								</div>
 								<!-- Form -->
 								<form>
-								<div  class="text-danger" v-for="(errorArray, idx) in notifmsg" :key="idx">
-									<div v-for="(allErrors, idx) in errorArray" :key="idx">
-									{{ allErrors }}
-									</div>
-       							</div>
+
 									<div class="form-group">
 										<label class="form-control-label">Name</label>
 										<input class="form-control" type="name" v-model="name">
