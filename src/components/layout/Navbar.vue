@@ -8,9 +8,11 @@
 						<ul>
 							<li class="menu-title">	<span>Main</span>
 							</li>
-							<li><router-link to="/index"><home-icon size="1.2x" class="custom-class mainicon"></home-icon> <span>Dashboard</span><span class="shape1"></span><span class="shape2"></span></router-link>
+							<li>
+								<router-link to="/index"><home-icon size="1.2x" class="custom-class mainicon"></home-icon> <span>Dashboard</span><span class="shape1"></span><span class="shape2"></span></router-link>
 							</li>
-							<li class="submenu"><a href="#"><user-icon size="1.2x" class="custom-class mainicon"></user-icon> <span>Patients</span> <span class="shape1"></span><span class="shape2"></span><span class="menu-arrow"> </span></a>
+							<li class="submenu">
+								<a href="#"><user-icon size="1.2x" class="custom-class mainicon"></user-icon> <span>Patients</span> <span class="shape1"></span><span class="shape2"></span><span class="menu-arrow"> </span></a>
 								<ul style="display: none;">
 									<li><router-link to="/patients">Patients List</router-link></li>
 									<li><router-link to="/patients-profile">Patient Profile</router-link></li>
@@ -22,7 +24,9 @@
 									<li><router-link to="/patients-data">External Data</router-link></li>
 								</ul>
 							</li>
-							<li><router-link to="/appointments"><list-icon size="1.2x" class="custom-class mainicon"></list-icon> <span>Appointments</span><span class="shape1"></span><span class="shape2"></span> <span class="badge bg-success-text">2</span></router-link>
+
+							
+							<!-- <li><router-link to="/appointments"><list-icon size="1.2x" class="custom-class mainicon"></list-icon> <span>Appointments</span><span class="shape1"></span><span class="shape2"></span> <span class="badge bg-success-text">2</span></router-link>
 							</li>
 							<li><router-link to="/flow-board"><bar-chart-icon size="1.2x" class="custom-class mainicon"></bar-chart-icon> <span>Flow Board</span><span class="shape1"></span><span class="shape2"></span> </router-link>
 							</li>
@@ -147,7 +151,7 @@
 									<li><router-link to="/tables-basic">Basic Tables </router-link></li>
 									<li><router-link to="/data-tables">Data Table </router-link></li>
 								</ul>
-							</li>
+							</li> -->
 						</ul>
 					</div>
 					</vue-custom-scrollbar>
