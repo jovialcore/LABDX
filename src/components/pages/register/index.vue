@@ -12,10 +12,16 @@
 						<div class="login-right">
 							<div class="login-right-wrap">
 								<h1>Register</h1>
+								<div >
 								<p class="account-subtitle">Thank you for choosing EMR. Please fill the form </p>
-								
+								</div>
 								<!-- Form -->
 								<form>
+								<div  class="text-danger" v-for="(errorArray, idx) in notifmsg" :key="idx">
+									<div v-for="(allErrors, idx) in errorArray" :key="idx">
+									{{ allErrors }}
+									</div>
+       							</div>
 									<div class="form-group">
 										<label class="form-control-label">Name</label>
 										<input class="form-control" type="name" v-model="name">
@@ -28,6 +34,7 @@
 									<div class="form-group col">
 										<label>Day</label>
 											<select class="form-control" v-model="day">
+												<option disabled > Select</option>
 												<option v-for="days in 31"  :key="days">{{days}}</option>
 											</select>
 									</div>
@@ -36,10 +43,10 @@
 										<select class="form-control" v-model="month">
 											<option disabled > Select</option>
 												<option value="1">January</option>
-												<option  value="2">Febuary</option>
-												<option  value="3">March</option>
+												<option value="2">Febuary</option>
+												<option value="3">March</option>
 												<option value="4">April</option>
-												<option    value="5">May</option>
+												<option value="5">May</option>
 												<option value="6">June</option>
 												<option value="7">July</option>
 												<option value="8">August</option>
@@ -70,12 +77,13 @@
 										</div>
 									</div>
 									<div class="form-group">
+									<div style="color:red"> {{notifPass}} </div>
 										<label class="form-control-label">Password</label>
-										<input class="form-control" type="text" v-model="pass">
+										<input class="form-control" type="password" v-model="pass" >
 									</div>
 									<div class="form-group">
 										<label class="form-control-label">Confirm Password</label>
-										<input class="form-control" type="text" v-model="cpass">
+										<input class="form-control" type="password" v-model="cpass" >
 									</div>
 									<div class="form-group mb-0">
 										<button class="btn btn-lg btn-block btn-primary" type="button" @click="register">Register</button>
@@ -117,28 +125,33 @@
 				month:'',
 				year: '',
 				gender: '',
-				cpass: '',
-				pass: '',
+				cpass: null,
+				pass: null,
+				notifPass: '',
+				notifmsg: ''
 			}
 		},
 
 		methods : {
-			register() {
-				
-				if (this.pass == this.cpass)
+			register() {	
+				if (this.pass !== this.cpass)
 				{
+					this.notifPass = "Password mistmatch !"
+			
+				}
+				else {
 					this.$store
 					.dispatch('register', {
 						name: this.name,
 						email: this.email,
-						dob: this.dob,
+						dob: this.year+"-"+this.month+"-"+this.day,// e.g 1996-10-8
 						gender:this.gender,
 						pass: this.pass,
 					})
 					.then(()=> {
 						this.$router.push("/settings")
-					}).catch((err) => {
-						console.log(err)
+					}).catch(e => {
+						this.notifmsg = e.response.data
 					})
 				}
 			}
