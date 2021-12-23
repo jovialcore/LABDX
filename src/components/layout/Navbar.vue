@@ -24,9 +24,16 @@
                 <home-icon
                   size="1.2x"
                   class="custom-class mainicon"
-                ></home-icon> <span>{{item.link}}</span><span class="shape1"></span><span class="shape2"></span>
+                >
+                </home-icon> 
+                <span>{{item.title}}</span>
+                <span class="shape1"></span>
+                <span class="shape2"></span>
               </router-link>
             </li>
+
+
+            
             <li class="submenu">
               <a href="#">
                 <user-icon
@@ -296,7 +303,7 @@ export default {
       settings: {
         suppressScrollX: true,
       },
-      activeClass: "active",
+      activeClass: "acjtive",
     };
     //  isactive : true
   },

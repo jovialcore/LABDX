@@ -70,7 +70,7 @@ const router = new Router({
     mode: 'history',
     base: 'app', // you use the base tag to set the root path of your application  or process.env.BASE_URL
     routes: [{
-            path: '/',
+            path: '/index',
             name: 'index',
             component: Index,
             meta: {
