@@ -18,12 +18,13 @@
           <ul>
             <li class="menu-title"> <span>Main</span>
             </li>
-            <li>
-              <router-link to="/index">
+
+            <li  v-for="(item, index) in items" :key="index">
+              <router-link :to="{name: item.link}">
                 <home-icon
                   size="1.2x"
                   class="custom-class mainicon"
-                ></home-icon> <span>Dashboard</span><span class="shape1"></span><span class="shape2"></span>
+                ></home-icon> <span>{{item.link}}</span><span class="shape1"></span><span class="shape2"></span>
               </router-link>
             </li>
             <li class="submenu">
@@ -219,7 +220,6 @@ import { SidebarIcon } from "vue-feather-icons";
 import { LayoutIcon } from "vue-feather-icons";
 
 export default {
-  
   components: {
     vueCustomScrollbar,
     HomeIcon,
@@ -243,17 +243,16 @@ export default {
     LayoutIcon,
   },
   mounted() {
-    
-     const itemma = this.items;
-     console.log(itemma);
-       for (let i = 0; i < itemma.length; i++) {
+    const itemma = this.items;
+    console.log(itemma);
+    for (let i = 0; i < itemma.length; i++) {
       const item = itemma[i];
       if (item.accessMeta) {
         if (item.accessMeta.accessRoles) {
-          const accesRole = item.accessMeta.accessRoles
+          const accesRole = item.accessMeta.accessRoles;
           if (!accesRole.includes(roleId)) {
             itemma.splice(i, 1);
-              i--; 
+            i--;
           }
         }
       }
