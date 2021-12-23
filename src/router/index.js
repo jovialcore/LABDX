@@ -78,7 +78,7 @@ const router = new Router({
             },
         },
         {
-            path: '/index',
+            path: '/',
             name: 'home',
             // meta: {
             //   auth: true

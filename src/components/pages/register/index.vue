@@ -44,6 +44,7 @@
 											</select>
 									</div>
 								<div class="form-group col">
+								
 										<label>Month</label>
 										<select class="form-control" v-model="month">
 											<option disabled > Select</option>
