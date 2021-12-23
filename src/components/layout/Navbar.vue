@@ -34,7 +34,7 @@
 
 
             
-            <li class="submenu">
+            <!-- <li class="submenu">
               <a href="#">
                 <user-icon
                   size="1.2x"
@@ -67,7 +67,7 @@
                   <router-link to="/patients-data">External Data</router-link>
                 </li>
               </ul>
-            </li>
+            </li> -->
 
             <!-- <li><router-link to="/appointments"><list-icon size="1.2x" class="custom-class mainicon"></list-icon> <span>Appointments</span><span class="shape1"></span><span class="shape2"></span> <span class="badge bg-success-text">2</span></router-link>
 							</li>
