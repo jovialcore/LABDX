@@ -89,7 +89,7 @@ export default {
         })
         .catch((err) => {
           console.log(err.data)
-          console.log(err);
+          	this.$toastr.e(err.response.data, "Error");
         });
     },
   },
