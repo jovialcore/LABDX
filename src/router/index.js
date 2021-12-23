@@ -72,7 +72,11 @@ const router = new Router({
     routes: [{
             path: '/',
             name: 'index',
-            component: Index
+            component: Index,
+            meta: {
+                auth: true
+            },
+
         },
         {
             path: '/index',
