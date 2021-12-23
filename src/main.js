@@ -15,33 +15,17 @@ import './assets/plugins/fontawesome/css/fontawesome.min.css'
 import './assets/plugins/fontawesome/css/all.min.css'
 require('./assets/css/style.css');
 Vue.config.productionTip = false
-    //globally registered components
+//globally registered components
 Vue.component('layout-header', LayoutHeader);
 Vue.component('layout-navbar', LayoutNavbar);
 Vue.component('layout-navbarvisit', LayoutNavbarvisit);
 Vue.component('loader', loader);
+
 /* eslint-disable no-new */
 new Vue({ //i need to look into what is happening here
     el: '#app',
     router,
     store,
-    // created() {
-    //   const userInfo = localStorage.getItem('user')
-    //   if (userInfo) {
-    //     const userData = JSON.parse(userInfo)
-    //     this.$store.commit('setUserData', userData)
-    //   } axios.interceptors.response.use(
-    //     response => response,
-    //     error => {
-    //       if (error.response.status === 401) {
-    //         this.$store.dispatch('logout')
-    //       }else {
-    //         console.log('nahwa o')
-    //       }
-    //       return Promise.reject(error)
-    //     }
-    //   )
-    // },
     components: { App },
     template: '<App/>'
 
