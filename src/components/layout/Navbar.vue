@@ -250,21 +250,7 @@ export default {
     LayoutIcon,
   },
   mounted() {
-    const itemma = this.items;
-    console.log(itemma);
-    for (let i = 0; i < itemma.length; i++) {
-      const item = itemma[i];
-      if (item.accessMeta) {
-        if (item.accessMeta.accessRoles) {
-          const accesRole = item.accessMeta.accessRoles;
-          if (!accesRole.includes(roleId)) {
-            itemma.splice(i, 1);
-            i--;
-          }
-        }
-      }
-    }
-
+  
     var $wrapper = $(".main-wrapper");
     var $pageWrapper = $(".page-wrapper");
 
@@ -303,7 +289,7 @@ export default {
       settings: {
         suppressScrollX: true,
       },
-      activeClass: "acjtive",
+      activeClass: "active",
     };
     //  isactive : true
   },

@@ -9,6 +9,7 @@ import LayoutHeader from './components/layout/Header'
 import LayoutNavbar from './components/layout/Navbar'
 import LayoutNavbarvisit from './components/layout/Navbarvisit'
 import loader from '@/components/loader'
+import Toasted from 'vue-toastr'
 let Bootstrap = require('bootstrap')
 import 'bootstrap/dist/css/bootstrap.css'
 import './assets/plugins/fontawesome/css/fontawesome.min.css'
@@ -20,6 +21,13 @@ Vue.component('layout-header', LayoutHeader);
 Vue.component('layout-navbar', LayoutNavbar);
 Vue.component('layout-navbarvisit', LayoutNavbarvisit);
 Vue.component('loader', loader);
+Vue.use(Toasted, {
+    position: 'bottom-center',
+    duration: 1000,
+    theme: "bubble",
+    type: "error",
+    iconPack: "fontawesome"
+    });
 
 /* eslint-disable no-new */
 new Vue({ //i need to look into what is happening here
