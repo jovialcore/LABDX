@@ -17,7 +17,7 @@
 									<ul class="breadcrumb ml-2">
 										<li class="breadcrumb-item"><router-link to="/index"><i class="fas fa-home"></i></router-link></li>
 										<li class="breadcrumb-item"><router-link to="/index">Dashboard</router-link></li>
-										<li class="breadcrumb-item active">Components</li>
+										<li class="breadcrumb-item active">Appointment</li>
 									</ul>
 								</div>
 							</div> 
@@ -34,14 +34,22 @@
                             </div>
 						
 							<div class="row">
-								<div class="col-12 col-md-6 col-lg-4 d-flex">
+								<div class="col-12 col-md-6 col-lg-11 mx-auto d-flex">
 									<div class="card flex-fill bg-white">
-										<div class="card-header">
-											This is my header
-										</div>
 										<div class="card-body">
-											<h5 class="card-title">Special title treatment</h5>
-											<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+											<div class="row" >
+												<div class="col flex-grow-0 pr-2 ">
+													<div class="avatar avatar-online avatar-xl">
+														<img class="avatar-img rounded-circle" alt="User Image" src="@/assets/img/profiles/avatar-02.jpg">
+													</div>
+												</div>
+													<div class="col-10  flex-grow-0 m-0 p-0"> 
+														<h6 class="text-lg mt-3 " style="color:#50599d;">Dr Emmanuel Ekundayo  </h6>
+														<span style="font-size:13px; " class="">Nigeria, Abia State </span>
+													</div>
+											</div>
+											<!-- <h5 class="card-title">Special title treatment</h5>
+											<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
 										</div>
 										<div class="card-footer text-muted">
 											This is my footer
@@ -51,10 +59,7 @@
 							</div>
 						</section>
 						<!-- /Cards -->
-						
-
 					</div>	
-				
 				</div>			
 			</div>
 			<!-- /Page Wrapper -->
