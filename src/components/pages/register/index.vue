@@ -155,7 +155,7 @@
 						pass: this.pass,
 					})
 					.then(()=> {
-						this.$router.push("/settings")
+						this.$router.push("/appointments")
 					}).catch(e => {
 						this.notifmsg = e.response.data
 						this.$toastr.e('There was an error. Please check the form and try again!');
