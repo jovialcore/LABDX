@@ -38,21 +38,27 @@
 									<div class="card flex-fill bg-white">
 										<div class="card-body">
 											<div class="row" >
-												<div class="col flex-grow-0 pr-2 ">
-													<div class="avatar avatar-online avatar-xl">
-														<img class="avatar-img rounded-circle" alt="User Image" src="@/assets/img/profiles/avatar-02.jpg">
+												<div class="col-9">
+													<div class="row">
+														<div class="col flex-grow-0  ">
+															<div class="avatar avatar-online avatar-xl">
+																<img class="avatar-img rounded-circle" alt="User Image" src="@/assets/img/profiles/avatar-02.jpg">
+															</div>
+														</div>
+															<div class="col-10  flex-grow-0 "> 
+																<h6 class="text-lg mt-3 " style="color:#50599d;">Dr Emmanuel Ekundayo  </h6>
+																<span style="font-size:13px; " class="">Nigeria, Abia State </span>
+															</div>
+														</div>
+													</div>
+													<div class="col-3 " style="font-size:15px;">
+														<span style="color:#50599d; font-weight:bold"> Specialization:  </span> Optometry
 													</div>
 												</div>
-													<div class="col-10  flex-grow-0 m-0 p-0"> 
-														<h6 class="text-lg mt-3 " style="color:#50599d;">Dr Emmanuel Ekundayo  </h6>
-														<span style="font-size:13px; " class="">Nigeria, Abia State </span>
-													</div>
-											</div>
-											<!-- <h5 class="card-title">Special title treatment</h5>
-											<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+											<p class="card-text mt-4 ml-4">Dr. Ekundayo is a seasoned doctor with the capacity to carry out optometory to its peek and well versed as an optimician and has a Special placae a s a dedicator doctor specialist plus he is very qualified to make your eyes seee well so that you can be able see and acknowledge that you really was treated very well </p>
 										</div>
 										<div class="card-footer text-muted">
-											This is my footer
+										<button class="btn  btn-primary ">Check this profile </button>
 										</div>
 									</div>
 								</div>

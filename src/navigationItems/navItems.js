@@ -19,10 +19,10 @@ export default [
         title: 'components',
         link: 'components'
     },
-    // {
-    //     title: 'patient-dashboard',
-    //     link: 'patients-profile'
-    // },
+    {
+        title: 'patient-dashboard',
+        link: 'patients-profile'
+    },
 
     // {
     //     title: 'patients',
