@@ -27,6 +27,12 @@ export default [
     {
         title: 'patient-dashboard',
         link: 'patients-profile'
-    }
+    },
     
+    {
+        title: 'patients',
+        link: 'patients-profile',
+    },
+
+   
 ]

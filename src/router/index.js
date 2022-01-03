@@ -65,6 +65,13 @@ import taxtypes from '@/components/settings/taxtypes'
 import uniqueinsurance from '@/components/Report/uniqueinsurance/index'
 import users from '@/components/Application/users'
 import visithistory from '@/components/patients/visithistory/index'
+
+// my added routers
+
+import appoint from '@/components/pages/appointments/appointment'
+
+
+// end my added routers
 Vue.use(Router)
 const router = new Router({
     mode: 'history',
@@ -86,6 +93,18 @@ const router = new Router({
 
             component: Index
         },
+
+        // my added routes
+        {
+            path: '/appointments',
+            name: 'appoint',
+            meta: {
+                auth: true
+            },
+            component: appoint
+        },
+
+        // end of my added routes
         {
             path: '/alert-log',
             name: 'alert-log',
@@ -181,6 +200,14 @@ const router = new Router({
         },
         {
             path: '/components',
+            name: 'components',
+            meta: {
+                auth: true
+            },
+            component: components
+        },
+                {
+            path: '/appointments',
             name: 'components',
             meta: {
                 auth: true

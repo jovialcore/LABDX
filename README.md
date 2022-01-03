@@ -1,5 +1,6 @@
 # Lab Dx
 ### An innovation providing medical services to users right to their doorsteps
+ Website: https://labdxapp.herokuapp.com/
 > preclinic vuejs project
 
 ## Build Setup
