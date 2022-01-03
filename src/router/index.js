@@ -87,9 +87,9 @@ const router = new Router({
         {
             path: '/',
             name: 'home',
-            // meta: {
-            //   auth: true
-            // },
+            meta: {
+              auth: true
+            },
 
             component: Index
         },

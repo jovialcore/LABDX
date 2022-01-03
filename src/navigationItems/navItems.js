@@ -15,14 +15,14 @@ export default [
     //     title: 'clinical-notes',
     //     link: 'clinical-report'
     // },
-    {
-        title: 'components',
-        link: 'components'
-    },
-    {
-        title: 'patient-dashboard',
-        link: 'patients-profile'
-    },
+    // {
+    //     title: 'components',
+    //     link: 'components'
+    // },
+    // {
+    //     title: 'patient-dashboard',
+    //     link: 'patients-profile'
+    // },
 
     // {
     //     title: 'patients',

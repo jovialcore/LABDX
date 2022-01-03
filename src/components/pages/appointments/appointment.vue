@@ -29,7 +29,7 @@
 						<!-- Cards -->
 						<section class="comp-section comp-cards">
 							<div class="section-header">
-                                <h3 class="section-title">Cards</h3>
+                                <h3 class="section-title">Appointment Section</h3>
                                 <div class="line"></div>
                             </div>
 						
@@ -51,7 +51,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="col-3 " style="font-size:15px;">
+													<div class="col-3 col-md-3 p-0 m-0" style="font-size:15px;">
 														<span style="color:#50599d; font-weight:bold"> Specialization:  </span> Optometry
 													</div>
 												</div>
