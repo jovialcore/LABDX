@@ -200,7 +200,7 @@
       </vue-custom-scrollbar>
     </div>
   </div>
-  <!-- /Sidebar -->
+  <!-- /Sidebar --> 
 
 </template>
 <script>
