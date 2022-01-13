@@ -162,6 +162,10 @@ import { XCircleIcon } from 'vue-feather-icons'
 		components: {
     XCircleIcon
   },
+
+  data() {
+	  
+  },
 		mounted() {
 			$(document).ready(function () {
 

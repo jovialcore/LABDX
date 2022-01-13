@@ -10,7 +10,8 @@ axios.defaults.baseURL = process.env.ROOT_API
 
 export default new Vuex.Store({
     state: { // state is like data(), the single source of truth
-        user: null
+        user: null,
+        doctors: []
     },
 
     mutations: { // mutations are like methods in the case of vuex
@@ -23,6 +24,10 @@ export default new Vuex.Store({
         clearUserData() {
             localStorage.removeItem('user')
             location.reload()
+        },
+
+        ListDoctors(state, doctors) {
+            state.doctors = doctors
         }
 
     },
@@ -62,6 +67,12 @@ export default new Vuex.Store({
         },
         logout({ commit }) {
             commit('clearUserData')
+        },
+
+        doctors({commit}, allDoctorsInfo) {
+            return axios 
+                .get('/api/doctor')
+                .then ()
         }
     },
 
