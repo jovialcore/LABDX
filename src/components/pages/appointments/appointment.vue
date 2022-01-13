@@ -166,12 +166,12 @@ import { XCircleIcon } from 'vue-feather-icons'
   data() {
 	  
   },
-		mounted() {
+	
+mounted() {
 
-	console.log(this.$store.dispatch('getDoctors'))
+	this.$store.dispatch('getDoctors')
 
 	$(document).ready(function () {
-
 
 				//Notification
 	$(document).on('click', '.notifications-item', function(s) {

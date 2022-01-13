@@ -69,7 +69,7 @@ export default new Vuex.Store({
             commit('clearUserData')
         },
 
-        getDoctors({ commit }, allDoctorsInfo) {
+        getDoctors({ commit }) {
             return axios
                 .get('/api/doctor')
                 .then(({ data }) => {
