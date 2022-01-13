@@ -167,7 +167,10 @@ import { XCircleIcon } from 'vue-feather-icons'
 	  
   },
 		mounted() {
-			$(document).ready(function () {
+
+	console.log(this.$store.dispatch('getDoctors'))
+
+	$(document).ready(function () {
 
 
 				//Notification

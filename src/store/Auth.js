@@ -5,8 +5,8 @@ import axios from 'axios'
 Vue.use(Vuex)
 
 axios.defaults.baseURL = process.env.ROOT_API
-    //"http://labdxbe.herokuapp.com/"
-    //process.env.VUE_APP_API_ENDPOINT
+//"http://labdxbe.herokuapp.com/"
+//process.env.VUE_APP_API_ENDPOINT
 
 export default new Vuex.Store({
     state: { // state is like data(), the single source of truth
@@ -69,16 +69,18 @@ export default new Vuex.Store({
             commit('clearUserData')
         },
 
-        doctors({commit}, allDoctorsInfo) {
-            return axios 
+        getDoctors({ commit }, allDoctorsInfo) {
+            return axios
                 .get('/api/doctor')
-                .then ()
+                .then(({ data }) => {
+                    commit('ListDoctors', data)
+                })
         }
     },
 
     getters: {
         isLogged: state => !!state.user // this is a short form to make value to be a boolean; either true or false()
-            //so basically we are checking if the user is logged with true/false
+        //so basically we are checking if the user is logged with true/false
     }
 })
 
