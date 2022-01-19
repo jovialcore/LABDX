@@ -45,16 +45,16 @@
 															</div>
 														</div>
 															<div class="col-10  flex-grow-0 "> 
-																<h6 class="text-lg mt-3 " style="color:#50599d;">Dr Em {{ doctor.name }} </h6>
-																<span style="font-size:13px; " class="">Nigeria, Abia State </span>
+																<h6 class="text-lg mt-3 " style="color:#50599d;">Dr  {{ doctor.name }} </h6>
+																<span style="font-size:13px; " class="">{{ doctor.country }}  </span>
 															</div>
 														</div>
 													</div>
 													<div class="col-3 col-md-3 p-0 m-0" style="font-size:15px;">
-														<span style="color:#50599d; font-weight:bold"> Specialization:  </span> Optometry
+														<span style="color:#50599d; font-weight:bold"> Specialization:  </span> {{ doctor.specialization }}
 													</div>
 												</div>
-											<p class="card-text mt-4 ml-4">Dr. Ekundayo is a seasoned doctor with the capacity to carry out optometory to its peek and well versed as an optimician and has a Special placae a s a dedicator doctor specialist plus he is very qualified to make your eyes seee well so that you can be able see and acknowledge that you really was treated very well </p>
+											<p class="card-text mt-4 ml-4"> {{ doctor.about }}</p>
 										</div>
 										<div class="card-footer text-muted">
 										<button class="btn  btn-primary ">Check this profile </button>
@@ -62,7 +62,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="row">
+							<!-- <div class="row">
 								<div class="col-12 col-md-6 col-lg-11 mx-auto d-flex">
 									<div class="card flex-fill bg-white">
 										<div class="card-body">
@@ -91,7 +91,7 @@
 										</div>
 									</div>
 								</div>
-							</div>
+							</div> -->
 						</section>
 						<!-- /Cards -->
 					</div>	
