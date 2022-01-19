@@ -32,7 +32,36 @@
                                 <h3 class="section-title">Appointment Section</h3>
                                 <div class="line"></div>
                             </div>
-						
+							<div class="row"  v-for="(doctor, index)  in doctors.data" :key="index">
+								<div class="col-12 col-md-6 col-lg-11 mx-auto d-flex">
+									<div class="card flex-fill bg-white">
+										<div class="card-body">
+											<div class="row" >
+												<div class="col-9">
+													<div class="row">
+														<div class="col flex-grow-0  ">
+															<div class="avatar avatar-online avatar-xl">
+																<img class="avatar-img rounded-circle" alt="User Image" src="@/assets/img/profiles/avatar-02.jpg">
+															</div>
+														</div>
+															<div class="col-10  flex-grow-0 "> 
+																<h6 class="text-lg mt-3 " style="color:#50599d;">Dr Em {{ doctor.name }} </h6>
+																<span style="font-size:13px; " class="">Nigeria, Abia State </span>
+															</div>
+														</div>
+													</div>
+													<div class="col-3 col-md-3 p-0 m-0" style="font-size:15px;">
+														<span style="color:#50599d; font-weight:bold"> Specialization:  </span> Optometry
+													</div>
+												</div>
+											<p class="card-text mt-4 ml-4">Dr. Ekundayo is a seasoned doctor with the capacity to carry out optometory to its peek and well versed as an optimician and has a Special placae a s a dedicator doctor specialist plus he is very qualified to make your eyes seee well so that you can be able see and acknowledge that you really was treated very well </p>
+										</div>
+										<div class="card-footer text-muted">
+										<button class="btn  btn-primary ">Check this profile </button>
+										</div>
+									</div>
+								</div>
+							</div>
 							<div class="row">
 								<div class="col-12 col-md-6 col-lg-11 mx-auto d-flex">
 									<div class="card flex-fill bg-white">
@@ -163,14 +192,17 @@ import { XCircleIcon } from 'vue-feather-icons'
     XCircleIcon
   },
 
-  data() {
-	  
+  computed : {
+	doctors() {
+	return this.$store.getters.allDoctors
+
+	},
+
   },
-	
+
+
 mounted() {
-
-	this.$store.dispatch('getDoctors')
-
+	this.$store.dispatch('getDoctors').data
 	$(document).ready(function () {
 
 				//Notification

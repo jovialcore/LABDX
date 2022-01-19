@@ -79,8 +79,9 @@ export default new Vuex.Store({
     },
 
     getters: {
-        isLogged: state => !!state.user // this is a short form to make value to be a boolean; either true or false()
+        isLogged: state => !!state.user, // this is a short form to make value to be a boolean; either true or false()
         //so basically we are checking if the user is logged with true/false
+        allDoctors: state => state.doctors
     }
 })
 
