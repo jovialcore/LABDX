@@ -71,8 +71,8 @@
 							<div class="row"  v-for="(doctor, index)  in doctors.data" :key="index">
 
 
-				<ModalStuff>
-					<template v-slot:Name> {{ doctor.name }} </template>
+				<ModalStuff :ids="doctor.specialization">
+					<template v-slot:Name> {{ 'Dr ' + doctor.name }} </template>
 					<template v-slot:Details> {{ doctor.about }} </template>
 				</ModalStuff>
 								<div class="col-12 col-md-6 col-lg-11 mx-auto d-flex">
@@ -87,7 +87,7 @@
 															</div>
 														</div>
 															<div class="col-10  flex-grow-0 "> 
-																<h6 class="text-lg mt-3 " style="color:#50599d;">Dr  {{ doctor.name }} </h6>
+																<h6 class="text-lg mt-3 " style="color:#50599d;">{{ 'Dr ' + doctor.name }} </h6>
 																<span style="font-size:13px; " class="">{{ doctor.country }}  </span>
 															</div>
 														</div>
@@ -98,8 +98,10 @@
 												</div>
 											<p class="card-text mt-4 ml-4"> {{ doctor.about }}</p>
 										</div>
+									
 										<div class="card-footer text-muted">
-											<button class="btn  btn-primary "  data-toggle="modal" data-target="#add_event">Check this profile </button>
+											<button class="btn  btn-primary "  data-toggle="modal" 
+										 :data-target="`#${doctor.specialization}`"  >Check this profile </button>
 										</div>
 									</div>
 								</div>
@@ -235,8 +237,12 @@ import ModalStuff from "@/components/modal/modal";
 		components: {
     XCircleIcon,
 	ModalStuff
+  },  
+  data() {
+    return {
+		
+    };
   },
-
   computed : {
 	doctors() {
 	return this.$store.getters.allDoctors

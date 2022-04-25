@@ -1,6 +1,6 @@
 <template>
   <!-- Add Event Modal -->
-  <div id="add_event" class="modal custom-modal fade" role="dialog">
+  <div :id="ids" class="modal custom-modal fade" role="dialog">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -23,3 +23,14 @@
     </div>
   </div>
 </template>
+
+
+<script>
+    export default {
+        props: ['ids'],
+        created: function () {
+            console.log('user data from parent component:')
+            console.log(this.ids) //prints out an empty string
+        },
+    }
+</script>
