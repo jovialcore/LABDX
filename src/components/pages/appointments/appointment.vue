@@ -25,8 +25,11 @@
 					</div> 
 					<!-- /Page Header -->
 
+
+
+
 		<!-- Add Event Modal -->
-				<div id="add_event" class="modal custom-modal fade" role="dialog">
+				<!-- <div id="add_event" class="modal custom-modal fade" role="dialog">
 					<div class="modal-dialog modal-dialog-centered" role="document">
 						<div class="modal-content">
 							<div class="modal-header">
@@ -54,8 +57,8 @@
 							</div>
 						</div>
 					</div>
-				</div>
-				<!-- /Add Event Modal -->
+				</div> -->
+		<!-- /Add Event Modal -->
 				
 					
 					<div class="comp-sec-wrapper">				
@@ -66,6 +69,12 @@
                                 <div class="line"></div>
                             </div>
 							<div class="row"  v-for="(doctor, index)  in doctors.data" :key="index">
+
+
+				<ModalStuff>
+					<template v-slot:Name> {{ doctor.name }} </template>
+					<template v-slot:Details> {{ doctor.about }} </template>
+				</ModalStuff>
 								<div class="col-12 col-md-6 col-lg-11 mx-auto d-flex">
 									<div class="card flex-fill bg-white">
 										<div class="card-body">
@@ -220,9 +229,12 @@
 
 <script>
 import { XCircleIcon } from 'vue-feather-icons'
+
+import ModalStuff from "@/components/modal/modal";
 	export default {
 		components: {
-    XCircleIcon
+    XCircleIcon,
+	ModalStuff
   },
 
   computed : {
