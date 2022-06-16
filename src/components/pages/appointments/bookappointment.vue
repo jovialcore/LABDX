@@ -2,12 +2,12 @@
 	<div>
 		<div class="main-wrapper">
 			<layout-header></layout-header>
-			<layout-navbar></layout-navbar>
+            <layout-navbar></layout-navbar>
+			<!-- <layout-navbarvisit></layout-navbarvisit> -->
 			
 			<!-- Page Wrapper -->
-            <div class="page-wrapper">
-                <div class="content container-fluid">
-				
+			<div class="page-wrapper">
+				<div class="content container-fluid">
 					<!-- Page Header -->
 					<div class="page-header">
 						<div class="row align-items-center">
@@ -16,134 +16,83 @@
 									<h5 class="page-title">Dashboard</h5>
 									<ul class="breadcrumb ml-2">
 										<li class="breadcrumb-item"><router-link to="/index"><i class="fas fa-home"></i></router-link></li>
-										<li class="breadcrumb-item"><router-link to="/index">Dashboard</router-link></li>
-										<li class="breadcrumb-item active">Appointment</li>
+										<li class="breadcrumb-item"><router-link to="/index">Doctor Dashboard</router-link></li>
+										<li class="breadcrumb-item active">Create Visit</li>
 									</ul>
 								</div>
-							</div> 
-						</div>
-					</div> 
-					<!-- /Page Header -->
-
-
-
-
-		<!-- Add Event Modal -->
-				<!-- <div id="add_event" class="modal custom-modal fade" role="dialog">
-					<div class="modal-dialog modal-dialog-centered" role="document">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title">Add Event</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-									<span aria-hidden="true">&times;</span>
-								</button>
-							</div>
-							<div class="modal-body">
-								<form>
-									<div class="form-group">
-										<label>Event Name <span class="text-danger">*</span></label>
-										<input class="form-control" type="text">
-									</div>
-									<div class="form-group">
-										<label>Event Date <span class="text-danger">*</span></label>
-										<div class="cal-icon">
-											<input class="form-control datetimepicker" type="text">
-										</div>
-									</div>
-									<div class="submit-section">
-										<button class="btn btn-primary submit-btn">Submit</button>
-									</div>
-								</form>
 							</div>
 						</div>
 					</div>
-				</div> -->
-		<!-- /Add Event Modal -->
-				
-					
-					<div class="comp-sec-wrapper">				
-						<!-- Cards -->
-						<section class="comp-section comp-cards">
-							<div class="section-header">
-                                <h3 class="section-title">Appointment Section</h3>
-                                <div class="line"></div>
-                            </div>
-							<div class="row"  v-for="(doctor, index)  in doctors.data" :key="index">
-
-
-				<ModalStuff :ids="doctor.specialization">
-					<template v-slot:Name> {{ 'Dr ' + doctor.name }} </template>
-					<template v-slot:Details> {{ doctor.about }} </template>
-					<template v-slot:whoToBook> {{ 'Contact Dr ' + doctor.name }} </template>
-				</ModalStuff> 
-								<div class="col-12 col-md-6 col-lg-11 mx-auto d-flex">
-									<div class="card flex-fill bg-white">
-										<div class="card-body">
-											<div class="row" >
-												<div class="col-9">
-													<div class="row">
-														<div class="col flex-grow-0  ">
-															<div class="avatar avatar-online avatar-xl">
-																<img class="avatar-img rounded-circle" alt="User Image" src="@/assets/img/profiles/avatar-02.jpg">
-															</div>
-														</div>
-															<div class="col-10  flex-grow-0 "> 
-																<h6 class="text-lg mt-3 " style="color:#50599d;">{{ 'Dr ' + doctor.name }} </h6>
-																<span style="font-size:13px; " class="">{{ doctor.country }}  </span>
-															</div>
-														</div>
-													</div>
-													<div class="col-3 col-md-3 p-0 m-0" style="font-size:15px;">
-														<span style="color:#50599d; font-weight:bold"> Specialization:  </span> {{ doctor.specialization }}
-													</div>
+					<!-- /Page Header -->
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="card">
+								<div class="card-header">
+									<h4 class="card-title">New Encounter Form</h4>
+								</div>
+								<div class="card-body">
+									<form action="#">
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group">
+													<label>Why do you want to see Dr ?</label>
+													<select class="select">
+														<option>Select</option>
+														<option value="1">Office Visit</option>
+														<option value="2">Consultation</option>
+														<option value="3">Health and Behavioral Assessment</option>
+													</select>
 												</div>
-											<p class="card-text mt-4 ml-4"> {{ doctor.about }}</p>
+												<div class="form-group">
+													<label>Type of problem</label>
+																										                                        <select class="select">
+														<option>Select</option>
+														<option value="1">Headache </option>
+														<option value="2">Severe Eye problem</option>
+														<option value="3">Waist Pain</option>
+													</select>
+												</div>
+											
+												<div class="form-group">
+													<label>Anyother Reason for Visiting</label>
+													<input type="text" class="form-control">
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-group">
+													<label>Sensitivity</label>
+													<select class="select">
+														<option>Select</option>
+														<option value="1">Normal</option>
+														<option value="2">High</option>
+														<option value="3">None</option>
+													</select>
+												</div>
+												<div class="form-group">
+													<label>Choose a date</label>
+			                                        <select class="select">
+														<option>Select</option>
+														<option value="1">Tuesdays (9:00am - 2:00pm) </option>
+														<option value="2">Thursdays (9:00am - 2:00pm) </option>
+														<option value="3">Saturdays (12:00am - 4:00pm) </option>
+													</select>			
+												</div>
+
+												
+											</div>
 										</div>
-									
-										<div class="card-footer text-muted">
-											<button class="btn  btn-primary "  data-toggle="modal" 
-										 :data-target="`#${doctor.specialization}`"  >Check this profile </button>
+										<div class="text-right">
+											<button type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
 										</div>
-									</div>
+									</form>
 								</div>
 							</div>
-							<!-- <div class="row">
-								<div class="col-12 col-md-6 col-lg-11 mx-auto d-flex">
-									<div class="card flex-fill bg-white">
-										<div class="card-body">
-											<div class="row" >
-												<div class="col-9">
-													<div class="row">
-														<div class="col flex-grow-0  ">
-															<div class="avatar avatar-online avatar-xl">
-																<img class="avatar-img rounded-circle" alt="User Image" src="@/assets/img/profiles/avatar-02.jpg">
-															</div>
-														</div>
-															<div class="col-10  flex-grow-0 "> 
-																<h6 class="text-lg mt-3 " style="color:#50599d;">Dr Emmanuel Ekundayo  </h6>
-																<span style="font-size:13px; " class="">Nigeria, Abia State </span>
-															</div>
-														</div>
-													</div>
-													<div class="col-3 col-md-3 p-0 m-0" style="font-size:15px;">
-														<span style="color:#50599d; font-weight:bold"> Specialization:  </span> Optometry
-													</div>
-												</div>
-											<p class="card-text mt-4 ml-4">Dr. Ekundayo is a seasoned doctor with the capacity to carry out optometory to its peek and well versed as an optimician and has a Special placae a s a dedicator doctor specialist plus he is very qualified to make your eyes seee well so that you can be able see and acknowledge that you really was treated very well </p>
-										</div>
-										<div class="card-footer text-muted">
-										<button class="btn  btn-primary ">Check this profile </button>
-										</div>
-									</div>
-								</div>
-							</div> -->
-						</section>
-						<!-- /Cards -->
-					</div>	
-				</div>			
+						</div>
+					</div>
+				</div>
 			</div>
 			<!-- /Page Wrapper -->
-
+			
 			<!-- Notification -->
 			<div class="notifications">
 				<div class="topnav-dropdown-header">
@@ -220,7 +169,7 @@
 					</ul>
 				</div>
 				<div class="topnav-dropdown-footer">
-					<a href="javascript:void(0);">View all Notifications</a>
+					<a href="#">View all Notifications</a>
 				</div>
 			</div>
 			<!-- /Notification -->
@@ -232,30 +181,13 @@
 
 <script>
 import { XCircleIcon } from 'vue-feather-icons'
-
-import ModalStuff from "@/components/modal/modal";
 	export default {
 		components: {
-    XCircleIcon,
-	ModalStuff
-  },  
-  data() {
-    return {
-		
-    };
+    XCircleIcon
   },
-  computed : {
-	doctors() {
-	return this.$store.getters.allDoctors
+		mounted() {
+			$(document).ready(function () {
 
-	},
-
-  },
-
-
-mounted() {
-	this.$store.dispatch('getDoctors').data
-	$(document).ready(function () {
 
 				//Notification
 	$(document).on('click', '.notifications-item', function(s) {

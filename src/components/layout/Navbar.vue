@@ -21,12 +21,12 @@
 
             <li  v-for="(item, index) in items" :key="index">
               <router-link :to="{name: item.link}">
-                <home-icon
+                <!-- <home-icon
                   size="1.2x"
                   class="custom-class mainicon"
                 >
-                </home-icon> 
-                <span>{{item.title}}</span>
+                </home-icon>  -->
+                <span>{{item.title}} </span>
                 <span class="shape1"></span>
                 <span class="shape2"></span>
               </router-link>

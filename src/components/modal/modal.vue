@@ -12,11 +12,14 @@
           </button>
         </div>
         <div class="modal-body">
-            
-            <slot name="Details">Default details </slot>
+          <slot name="Details">Default details</slot>
 
           <div class="submit-section">
-            <button class="btn btn-primary submit-btn">Book him</button>
+            <button class="btn btn-primary submit-btn">
+              <slot name="whoToBook">
+                
+              </slot>
+            </button>
           </div>
         </div>
       </div>
@@ -26,11 +29,11 @@
 
 
 <script>
-    export default {
-        props: ['ids'],
-        created: function () {
-            console.log('user data from parent component:')
-            console.log(this.ids) //prints out an empty string
-        },
-    }
+export default {
+  props: ["ids"],
+  created: function () {
+    console.log("user data from parent component:");
+    console.log(this.ids); //prints out an empty string
+  },
+};
 </script>

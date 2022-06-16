@@ -83,6 +83,7 @@ export default {
 
   methods: {
     logger() {
+      //catch the
       this.$store
         .dispatch("login", {
           email: this.email,
@@ -92,7 +93,6 @@ export default {
           this.$router.push("/"); //this is the equivalent of window.location.href = '/' or <router-link to="/">
         })
         .catch((err) => {
-          console.log(err.data);
           this.$toastr.e(err.response.data, "Error");
         });
     },

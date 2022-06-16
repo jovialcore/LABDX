@@ -69,6 +69,7 @@ import visithistory from '@/components/patients/visithistory/index'
 // my added routers
 
 import appoint from '@/components/pages/appointments/appointment'
+import bookApointment from '@/components/pages/appointments/bookappointment'
 
 
 // end my added routers
@@ -96,12 +97,21 @@ const router = new Router({
 
         // my added routes
         {
-            path: '/appointments',
+            path: '/appointment',
             name: 'appoint',
             meta: {
                 auth: true
             },
             component: appoint
+        },
+
+        {
+            path: '/book-appointment',
+            name: 'book-appoint',
+            meta: {
+                auth: true
+            },
+            component:  bookApointment 
         },
 
         // end of my added routes

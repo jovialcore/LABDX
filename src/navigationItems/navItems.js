@@ -34,5 +34,10 @@ export default [
         link: 'appoint',
     },
 
+    {
+        title: 'Book-Appointment',
+        link: 'book-appoint',
+    },
+
 
 ]
