@@ -71,7 +71,7 @@
 							<div class="row"  v-for="(doctor, index)  in doctors.data" :key="index">
 
 
-				<ModalStuff :ids="doctor.specialization">
+				<ModalStuff :ids="doctor.specialization" >
 					<template v-slot:Name> {{ 'Dr ' + doctor.name }} </template>
 					<template v-slot:Details> {{ doctor.about }} </template>
 					<template v-slot:whoToBook> {{ 'Contact Dr ' + doctor.name }} </template>

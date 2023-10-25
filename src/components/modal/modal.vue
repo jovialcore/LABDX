@@ -15,11 +15,14 @@
           <slot name="Details">Default details</slot>
 
           <div class="submit-section">
-            <button class="btn btn-primary submit-btn">
-              <slot name="whoToBook">
-                
-              </slot>
-            </button>
+          <!--Next goal is to send the link from appointment back to here. Untill then , see you next time !!!  -->
+              <router-link :to="link">
+                <button class="btn btn-primary submit-btn">
+                   <slot name="whoToBook">
+                       </slot>
+                </button>
+              </router-link>
+          
           </div>
         </div>
       </div>
@@ -30,7 +33,7 @@
 
 <script>
 export default {
-  props: ["ids"],
+  props: ["ids", "link"], //pass from parent to child using props then iterate
   created: function () {
     console.log("user data from parent component:");
     console.log(this.ids); //prints out an empty string
